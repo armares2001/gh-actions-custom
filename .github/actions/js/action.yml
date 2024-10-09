@@ -1,0 +1,10 @@
+name: "js Action"
+description: "An action to execute JavaScript tasks"
+
+runs:
+  using: "node16"
+  main: "index.js"
+
+branding:
+  icon: "package"
+  color: "blue"
