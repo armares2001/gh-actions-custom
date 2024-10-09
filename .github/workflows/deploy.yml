@@ -66,3 +66,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Run JavaScript action
         uses: ./.github/actions/js
+        with:
+          script: "echo 'pollo'"
+          script-args: "arg1 arg2"
+          working-directory: "."
+          node-version: "16"
