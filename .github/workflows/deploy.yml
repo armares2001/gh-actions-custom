@@ -65,9 +65,12 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: Run JavaScript action
+        id: js-action
         uses: ./.github/actions/js
         with:
           script: "echo 'pollo'"
           script-args: "arg1 arg2"
           working-directory: "."
           node-version: "16"
+      - name: Get the output time
+        run: echo "The time was ${{ steps.js-action.outputs.time }}"

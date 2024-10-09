@@ -6,6 +6,7 @@ async function run() {
   core.notice("Hello World");
   const script = core.getInput("script");
   await exec.exec(script);
+  core.setOutput("time", new Date().toTimeString());
 }
 
 run();
